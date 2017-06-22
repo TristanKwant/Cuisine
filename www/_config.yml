@@ -21,7 +21,7 @@ markdown: kramdown
 
 sass:
   sass_dir: _sass
-  style: nested
+  style: expanded
 
 
 

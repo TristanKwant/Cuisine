@@ -1,8 +1,86 @@
 
 /* ======= header========= */
+.container-menu
+  background-color: #416A76
+  height: 90px
+  width: 970px
+  margin: 0 auto
+  overflow: hidden
+  clear: both
 
 
 
-.header
-  background-color: $second-color
-  height: 100px
+
+.corner-left
+  width: 0
+  height: 0
+  border-bottom: 40px solid
+  border-right: 40px solid transparent
+  float: left
+  margin-top: 50px
+
+.corner-right
+  width: 0
+  height: 0
+  border-top: 40px solid white
+  border-left: 40px solid transparent
+  float: right
+
+.back
+  background-color: white
+  height: 50px
+  width: 50%
+  float: left
+  position: relative
+  top: -90px
+  z-index: 0
+  background-color: #416A76
+
+.back-r
+  background-color: white
+  height: 50px
+  width: 50%
+  float: right
+  position: relative
+  right: 0
+  top: -50px
+  z-index: 0
+  background-color: #416A76
+
+header
+  //background-color: $second-color
+
+  height: 90px
+  position: relative
+  color: white
+  z-index: 1
+
+  a:link
+    color: white
+    text-decoration: none
+  a:visited
+    color: white
+  a:hover
+    color: black
+
+
+  img.logo
+    float: left
+    padding: 10px 30px 0 0
+
+  li
+    float: left
+    list-style-type: none
+    padding-right: 10px
+
+  nav.main-menu
+    li
+      padding-top: 20px
+
+  nav.util-menu
+    float: right
+    padding-top: 10px
+
+    ul
+      margin: 0
+      padding: 0
