@@ -4,10 +4,26 @@
 //*
   background-color : rgba(0,0,0,0.3)
 
+//Kleuren
+$contrast-color: #fed400
+$dark-color: #0f323a
+$primary-color: #406b76
+$light: #d1dee1
+$lighter: #dee8ea
+$lightest: rgba(105,138,148,0.1)
+
+//Fonts
+$menu-text: 'Montserrat', sans-serif
+$body-text: 'Raleway', sans-serif
+$menu-text-dec: 'Playfair Display', serif
+
+*
+  box-sizing: border-box
+
 .container
-  width: 970px
+  max-width: 970px
   margin: 0 auto
-  padding: 0 10px
+  //padding: 0 10px
 
 .container-menu
   width: 970px
@@ -18,3 +34,54 @@
 // imports
 @import header
 @import footer
+@import hero
+
+
+//week menu-text
+
+.banner
+  position: relative
+  overflow: hidden
+
+  div
+    border: 3px solid $contrast-color
+    position: absolute
+    top: 10%
+    left: 2%
+    width: 96%
+    height: 80%
+
+
+    h2
+      font-family: $menu-text-dec
+      font-style: italic
+      font-weight: bold
+      position: absolute
+      margin: 0
+      bottom: 7%
+      right: 2%
+
+
+  img
+    max-width: 100%
+
+
+.flex-container
+  overflow: hidden
+  font-size: 0
+
+.flextest
+
+
+  margin-top: 10px
+
+
+  .flex
+    margin-right: 20px
+    float: left
+    width: 227px
+    height: 227px
+    border: 1px solid black
+
+.flextest div:last-child
+  margin-right: 0
