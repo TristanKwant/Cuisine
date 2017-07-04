@@ -4,27 +4,82 @@
 
 footer
   //background-color: $primary-color
-  height: 90px
-  position: relative
-  color: white
-  z-index: 1
 
-  .back-foot
+  li
+    list-style-type: none
+    display: inline-block
+    padding-right: 30px
 
-    height: 50px
-    width: 50%
+  //footer logo
+  .logo-footer
+    height: 140px
+    text-align: center
+    margin-top: 1px
+    background-color: $primary-color
 
-    position: relative
-    top: -90px
-    z-index: 0
-    background-color: #416A76
+    img
+      padding-top: 30px
 
-  .back-foot-r
+  //social
+  .social
+    height: 130px
+    margin-top: 1px
+    background-color: $light
+    border-top: 3px solid $contrast-color
 
-    height: 50px
-    width: 50%
-    position: relative
-    right: 0
-    top: -50px
-    z-index: 0
-    background-color: #416A76
+    .social-menu
+      margin: 40px 5px 0 0
+      float: right
+    ul
+      padding: 0
+      margin: 0
+    li
+      list-style-type: none
+      padding-right: 30px
+
+
+    .news-signup
+      float: left
+      margin: 50px 0 50px 115px
+      border: 1px solid $contrast-color
+      input
+        width: 360px
+        height: 30px
+      button
+        height: 30px
+        font-family: $menu-text
+        color: $dark-color
+        background-color: $lighter
+        vertical-align: top
+        margin: 0
+        border: none
+      button:hover
+        font-weight: bold
+        text-decoration: underline
+        text-decoration-color: $contrast-color
+        cursor: pointer
+
+
+
+
+
+  .footer-menu
+    height: 123px
+    margin-top: 1px
+    background-color: $lighter
+    nav
+      padding-top: 40px
+      text-align: center
+      font-family: $menu-text
+
+      li:last-child
+        padding-right: 0
+
+      
+
+
+
+  .copyright
+    text-align: center
+    height: 30px
+    margin-top: 1px
