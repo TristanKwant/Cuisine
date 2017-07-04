@@ -20,6 +20,21 @@ $menu-text-dec: 'Playfair Display', serif
 *
   box-sizing: border-box
 
+img
+  max-width: 100%
+
+h2
+  font-family: $menu-text-dec
+  font-style: italic
+
+p
+  font-family: $body-text
+
+small
+  font-family: $body-text
+  font-size: 12px
+
+
 .container
   max-width: 970px
   margin: 0 auto
@@ -29,59 +44,49 @@ $menu-text-dec: 'Playfair Display', serif
   width: 970px
   margin: 0 auto
 
+a
+  color: $dark-color
+  text-decoration: none
+  font-size: 18px
+
+a:hover
+  font-weight: 700
+  text-decoration: underline
+  text-decoration-color: $contrast-color
 
 
 // imports
 @import header
+@import weekmenu
 @import footer
 @import hero
+@import books-overview
 
 
-//week menu-text
+// new arrivals
+.new-arrivals
+  width: 100%
+  background-color: $lighter
+  h1
+    background-color: $light
+    padding: 5px 0 5px 60px
+    text-decoration: underline
+    text-decoration-color: $contrast-color
 
-.banner
-  position: relative
+
+
+.carousel
   overflow: hidden
-
-  div
-    border: 3px solid $contrast-color
-    position: absolute
-    top: 10%
-    left: 2%
-    width: 96%
-    height: 80%
+  width: 700px
+  margin: 0 auto
 
 
-    h2
-      font-family: $menu-text-dec
-      font-style: italic
-      font-weight: bold
-      position: absolute
-      margin: 0
-      bottom: 7%
-      right: 2%
+.books
+  margin: 0 auto
+  float: left
+  margin: 40px 0 55px 0
+  h2
+    padding-left: 0
 
-
-  img
-    max-width: 100%
-
-
-.flex-container
-  overflow: hidden
-  font-size: 0
-
-.flextest
-
-
-  margin-top: 10px
-
-
-  .flex
-    margin-right: 20px
-    float: left
-    width: 227px
-    height: 227px
-    border: 1px solid black
-
-.flextest div:last-child
-  margin-right: 0
+.books:last-child
+  float: right

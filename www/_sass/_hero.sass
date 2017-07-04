@@ -23,6 +23,10 @@
     h2
       margin: 0
       padding: 0
+      font-family: $menu-text
+      font-size: 16px
+
+
 
   img
     float: left
@@ -37,22 +41,29 @@
     right: 20%
     margin: 0
 
-    div
-      border: 3px solid $dark-color
-      float: left
-      margin: 0
-      height: 37px
 
-    div:nth-child(2)
-      background-color: $contrast-color
-      border-left: 2px
+.cta-button
+  overflow: hidden
+  font-family: $menu-text
+  div
+    border: 3px solid $dark-color
+    border-right: 2px
+    float: left
+    margin: 0
+    height: 37px
 
-    h3
-      margin: 5px
-      padding: 0 5px 0 5px
-
+  .cta-button-img
+    background-color: $contrast-color
+    border: 3px solid $dark-color
     img
-      margin: 5px
+      margin: 10px
       margin-top: 6px
+
+
+  h3
+    margin: 5px
+    padding: 0 5px 0 5px
+
+
 
     //CTA- einde
