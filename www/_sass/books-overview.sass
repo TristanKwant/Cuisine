@@ -2,6 +2,7 @@
 .banner-books
   margin-top: 10px
 
+
   h2
     color: $dark-color
     bottom: 0
@@ -13,3 +14,128 @@
     padding-bottom: 5px
     padding-left: 20px
     padding-right: 10px
+
+
+.content
+  overflow: hidden
+
+//filterbar
+
+.filter-bar
+  width: 30%
+  height: 300px
+  float: left
+  background-color: $lightest
+
+  .filter-box
+    margin: 10px
+    border: 1px solid $dark-color
+    width: 80%
+    border-radius: 10px
+    overflow: hidden
+
+    ul
+      padding-left: 10px
+      margin-top: 0px
+      border-top: 1px solid $dark-color
+      padding-top: 10px
+    li
+      list-style: none
+
+    .filter-group
+      overflow: hidden
+
+      h3
+        margin: 0
+        padding: 5px 0 5px 10px
+        float: left
+      img
+        float: right
+        background-color: $lighter
+        padding: 9px
+
+    label
+      font-family: $menu-text
+    .filter-hide
+      display: none
+
+
+
+
+
+
+.books-grid
+  width: 70%
+  float: right
+
+  a
+    font-size: 20px
+  img
+    float: left
+    margin-right: 10px
+
+  .book
+    margin-left: 30px
+    overflow: hidden
+    margin-bottom: 30px
+
+    img
+      float: left
+      margin-right: 10px
+
+
+    .info
+      float: right
+      width: 60%
+      margin: 0 25px 0 0
+      > img:last-child
+        float: left
+        margin-top: 32px
+        margin-left: 20px
+
+      > h3
+        display: inline-block
+        margin: 0
+        margin-left: 40px
+        color: red
+
+      h2
+        margin: 0
+      p
+        margin-bottom: 30px
+
+      ul
+        list-style-type: none
+        padding: 0
+        img
+          margin: 0
+
+
+
+
+  .add-cta
+    background-color: $contrast-color
+    width: 70%
+    padding: 5px
+    margin: 30px 10px 10px 0
+    border-radius: 10px
+    text-align: center
+    float: left
+
+
+
+    h3
+      color: $dark-color
+      display: inline-block
+      margin: 0
+    .plus
+      display: inline-block
+      margin: 3px 3px
+      margin-right: 0
+
+.not-active
+  display: none
+
+.cta-button-big.books-overview
+  margin-top: 30px
+  margin-bottom: 160px
