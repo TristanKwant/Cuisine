@@ -100,7 +100,7 @@ header nav.util-menu ul {
   overflow: hidden;
   margin-bottom: 50px;
 }
-.banner div {
+.banner > div {
   border: 3px solid #fed400;
   position: absolute;
   top: 10%;
@@ -219,7 +219,7 @@ footer .social li {
 }
 footer .social .news-signup {
   float: left;
-  margin: 50px 0 50px 115px;
+  margin: 50px 0 50px 50px;
   border: 1px solid #fed400;
 }
 footer .social .news-signup input {
@@ -396,6 +396,8 @@ footer .copyright {
   margin-left: 30px;
   overflow: hidden;
   margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d1dee1;
 }
 .books-grid .book img {
   float: left;
@@ -457,6 +459,37 @@ footer .copyright {
 .cta-button-big.books-overview {
   margin-top: 30px;
   margin-bottom: 160px;
+}
+
+.banner-recipies > div {
+  width: 30%;
+  background-color: rgba(105, 138, 148, 0.1);
+  padding-left: 20px;
+  padding-right: 20px;
+  height: auto;
+  margin-left: 20px;
+}
+.banner-recipies h2 {
+  position: static;
+  margin: 10px 0 20px 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+.banner-recipies p {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.cta-menu h3 {
+  background-color: #fed400;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
 }
 
 .new-arrivals {
