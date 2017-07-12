@@ -1,0 +1,109 @@
+---
+
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum- scale=1.0, user-scalable=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"/>
+	<link rel="stylesheet" href="../css/main.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400i,700i|Raleway:400,700" rel="stylesheet">
+
+	<title>{{ page.title }} cuisine</title>
+	<meta name="description" content="Gibson CEO unveils digital guitar">
+
+</head>
+
+<body>
+{% include header.html %}
+
+
+<div class="container">
+
+<!-- start top section -->
+  <div class="top-section recipe-single">
+    <img src="../assets/images/{{ page.plaatje }}" alt="{{ page.title }} boek">
+
+    <div class="content-recipe">
+      <div>
+        <h1>{{ page.title }}</h1>
+        <p>Delicious and Healthy Vegetarian Recipes for Every Day</p>
+      </div>
+			<ul>
+        <li>Auteur: {{page.auteur}}</li>
+        <li>Uitgever: {{page.uitgever}}</li>
+      </ul>
+
+			<ul class="small-spec-list">
+				<li>Engelstalig</li>
+				<li>{{ page.paginas }} pagina's</li>
+				<li>{{ page.nummer }}</li>
+				<li>{{ page.datum }}</li>
+			</ul>
+
+			<div class="price-block">
+				<p>{{ page.prijs }}</p>
+			</div>
+
+
+
+			<div class="ctas">
+				<div class="add-cta">
+					<img src="../assets/icons/plus.png" alt="plus" class="plus">
+					<h3>Add to shopping chart</h3>
+				</div>
+				<div class="add-cta btn-fav">
+					<img src="../assets/icons/hart.png" alt="heart">
+					<h3>favorite</h3>
+				</div>
+
+
+			</div>
+  	</div>
+	</div>
+<!-- eind top sectie -->
+
+<!-- begin content -->
+
+	<div class="">
+		<div class="content-bar">
+			<ul>
+				<li class="content-bar-active">summary</li>
+				<li>specifications</li>
+			</ul>
+		</div>
+		<div class="content-area content-area-summary content-area-active">
+			{{page.content}}
+		</div>
+		<div class="content-area content-area-specs ">
+			<ul>
+				<li>Engelstalig</li>
+				<li>{{ page.paginas }} pagina's</li>
+				<li>{{ page.nummer }}</li>
+				<li>{{ page.datum }}</li>
+			</ul>
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+{% include footer.html %}
+</body>
+</html>

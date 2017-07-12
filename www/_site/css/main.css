@@ -421,7 +421,7 @@ footer .copyright {
   display: inline-block;
   margin: 0;
   margin-left: 40px;
-  color: red;
+  color: #D0021B;
 }
 .books-grid .book .info h2 {
   margin: 0;
@@ -436,7 +436,8 @@ footer .copyright {
 .books-grid .book .info ul img {
   margin: 0;
 }
-.books-grid .add-cta {
+
+.add-cta {
   background-color: #fed400;
   width: 70%;
   padding: 5px;
@@ -445,12 +446,12 @@ footer .copyright {
   text-align: center;
   float: left;
 }
-.books-grid .add-cta h3 {
+.add-cta h3 {
   color: #0f323a;
   display: inline-block;
   margin: 0;
 }
-.books-grid .add-cta .plus {
+.add-cta .plus {
   display: inline-block;
   margin: 3px 3px;
   margin-right: 0;
@@ -719,4 +720,67 @@ footer .copyright {
   float: right;
   margin-right: 200px;
   margin-top: 50px;
+}
+
+.add-cta.btn-fav {
+  width: 25%;
+  background-color: white;
+  border: 1px solid #406b76;
+  box-sizing: inherit;
+}
+.add-cta.btn-fav img {
+  height: 20px;
+  margin: 1px 0 0 5px;
+}
+
+.small-spec-list li {
+  display: inline-block;
+}
+.small-spec-list li::before {
+  content: " | ";
+}
+
+.content-bar {
+  background-color: rgba(105, 138, 148, 0.1);
+  margin: 10px 0;
+}
+.content-bar ul {
+  list-style: none;
+  padding: 0;
+}
+.content-bar ul li {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  border-right: 3px solid white;
+  padding: 10px;
+}
+.content-bar .content-bar-active {
+  background-color: #406b76;
+  color: white;
+}
+
+.content-area-summary {
+  margin: 0 5px;
+}
+
+.content-area {
+  display: block;
+  margin-bottom: 100px;
+}
+
+.content-area-active {
+  display: block;
+}
+
+.price-block {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.price-block p {
+  color: #D0021B;
+  margin: 0;
 }
