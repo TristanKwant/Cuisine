@@ -23,6 +23,9 @@ $menu-text-dec: 'Playfair Display', serif
 img
   max-width: 100%
 
+h1
+  color: $primary-color
+
 h2
   font-family: $menu-text-dec
   font-style: italic
@@ -94,4 +97,184 @@ a:hover
   float: right
 
 
-// books-overview
+// recipe single
+
+.top-section.recipe-single
+  overflow: hidden
+  border-bottom: 3px solid $contrast-color
+  color: $primary-color
+  padding: 20px 0
+  ul
+    font-family: $body-text
+    list-style-type: none
+    padding: 0
+    li
+      margin: 20px 0
+      span
+        font-weight: 700
+        color: $dark-color
+  img
+    float: left
+.content-recipe
+  width: 60%
+  float: right
+
+  div:first-child
+    border-bottom: 3px solid $contrast-color
+    >h1
+      width: 80%
+      color: $dark-color
+      margin: 0
+    >p
+      margin-bottom: 10px
+      padding-bottom: 10px
+      color: $primary-color
+
+
+.tags
+  background-color: $lightest
+  margin-bottom: 30px
+  ul
+
+    padding: 10px 0
+
+    li
+      display: inline-block
+      padding-left: 10px
+      color: $dark-color
+
+
+
+.share
+  float: left
+  h3
+    margin: 0 0 10px 0
+  img
+    display: inline-block
+    padding: 3px
+
+.found-in
+  float: right
+  width: 50%
+  img
+    margin-right: 15px
+  h3
+    margin: 0
+    font-size: 15px
+    border: 1px solid $contrast-color
+    padding: 2px
+    display: inline-block
+  h2
+    font-size: 15px
+    margin-bottom: 5px
+  p
+    font-size: 14px
+    margin: 0
+
+.recipe-section
+  overflow: hidden
+  //ul
+  //list-style-type: none
+    padding: 0
+  ul, ol
+    font-family: $body-text
+    font-size: 17px
+    li
+      margin: 20px 0
+      span
+        font-weight: 700
+        color: $dark-color
+  ol
+    margin-right: 30px
+
+
+  .ingredients
+    float: left
+    width: 30%
+  .instructions
+    float: right
+    width: 50%
+
+//contact page
+
+
+.contact-container
+  max-width: 580px
+  margin-top: 50px
+
+  >div
+    text-align: center
+  form
+    margin-bottom: 100px
+    fieldset
+      border: none
+      margin: 0
+      padding: 0
+    div
+      display: inline-block
+    .names
+      input
+        width: 250px
+        margin-right: 0
+      div:first-child
+        input
+          margin-right: 76px
+
+
+    label
+      display: block
+      font-family: $body-text
+      margin: 10px 0 2px 0
+
+    input, textarea, select
+      border: none
+      border: 1px solid $primary-color
+      margin: 0 10px 10px 0
+      border-radius: 8px
+      display: inline-block
+      padding: 5px
+
+    .mail, .subject
+      width: 100%
+      input
+        width: 100%
+
+    .message
+      width: 100%
+      textarea
+        width: 100%
+
+    .phone
+      input
+        width: 150px
+        margin-right: 60px
+
+    select
+      margin-right: 0
+      height: 31px
+      background-color: white
+
+      option
+        margin: 10px
+
+
+
+
+// about page
+
+.about-text
+  width: 400px
+  font-size: 18px
+  margin-bottom: 100px
+  margin-top: 50px
+
+.about-container
+  overflow: hidden
+
+
+  .lcol
+    margin-left: 200px
+  .rcol
+    float: right
+    margin-right: 200px
+    margin-top: 50px
