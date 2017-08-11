@@ -285,11 +285,12 @@ a:hover
 
 //single book
 
-.add-cta.btn-fav
+.btn-fav
   width: 25%
   background-color: white
   border: 1px solid $primary-color
   box-sizing: inherit
+  cursor: pointer
 
   img
     height: 20px
@@ -316,12 +317,12 @@ a:hover
       font-style: normal
       font-weight: 400
       font-size: 18px
-      //margin: 0 10px
+      background-color: $lighter
       border-right: 3px solid white
       padding: 10px
 
 
-  .content-bar-active
+  .summary
     background-color: $primary-color
     color: white
 
@@ -329,11 +330,13 @@ a:hover
   margin: 0 5px
 
 .content-area
-  display: block
+  display: none
   margin-bottom: 100px
 
 .content-area-active
   display: block
+
+
 
 .price-block
   font-size: 30px

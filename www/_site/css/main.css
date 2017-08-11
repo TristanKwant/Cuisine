@@ -396,6 +396,7 @@ footer .copyright {
   margin-right: 10px;
 }
 .books-grid .book {
+  display: none;
   margin-left: 30px;
   overflow: hidden;
   margin-bottom: 30px;
@@ -721,13 +722,14 @@ footer .copyright {
   margin-top: 50px;
 }
 
-.add-cta.btn-fav {
+.btn-fav {
   width: 25%;
   background-color: white;
   border: 1px solid #406b76;
   box-sizing: inherit;
+  cursor: pointer;
 }
-.add-cta.btn-fav img {
+.btn-fav img {
   height: 20px;
   margin: 1px 0 0 5px;
 }
@@ -753,10 +755,11 @@ footer .copyright {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  background-color: #dee8ea;
   border-right: 3px solid white;
   padding: 10px;
 }
-.content-bar .content-bar-active {
+.content-bar .summary {
   background-color: #406b76;
   color: white;
 }
@@ -766,7 +769,7 @@ footer .copyright {
 }
 
 .content-area {
-  display: block;
+  display: none;
   margin-bottom: 100px;
 }
 
