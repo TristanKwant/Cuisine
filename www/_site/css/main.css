@@ -74,6 +74,7 @@ header li {
   float: left;
   list-style-type: none;
   padding-right: 23px;
+  cursor: pointer;
 }
 header nav.main-menu li {
   padding-top: 20px;
@@ -85,6 +86,10 @@ header nav.util-menu {
 header nav.util-menu ul {
   margin: 0;
   padding: 0;
+}
+header .search-input {
+  display: none;
+  width: 0;
 }
 
 .weekmenu {
@@ -725,7 +730,7 @@ footer .copyright {
 .btn-fav {
   width: 25%;
   background-color: white;
-  border: 1px solid #406b76;
+  border: 1px solid #d1dee1;
   box-sizing: inherit;
   cursor: pointer;
 }
@@ -758,6 +763,7 @@ footer .copyright {
   background-color: #dee8ea;
   border-right: 3px solid white;
   padding: 10px;
+  cursor: pointer;
 }
 .content-bar .summary {
   background-color: #406b76;
@@ -785,4 +791,24 @@ footer .copyright {
 .price-block p {
   color: #D0021B;
   margin: 0;
+}
+
+.filter-recipies {
+  float: none;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+.filter-recipies .filter-list {
+  display: none;
+}
+.filter-recipies .map {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.filter-recipies .filter-box {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
 }

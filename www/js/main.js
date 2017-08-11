@@ -2,6 +2,26 @@
 
 $(document).ready(function() {
 
+  // header
+
+  var cl = 0;
+  $(".search img").click( function(){
+
+    if(cl == 0){
+      $(".search-input").show().animate({width: "300px"});
+      cl = 1;
+    } else if(cl == 1){
+      $(".search-input").animate({width: "0px"}, function(){
+        $(".search-input").hide();
+      });
+
+      cl = 0
+    }
+
+
+
+  });
+
 
 
   $(".authors .plus").click( function(){
@@ -11,15 +31,47 @@ $(document).ready(function() {
 
   });
 
+
+
+// filter bar
   $(".filter-bar :checkbox").click(function() {
    $("div.book").hide();
-
+   $("div.flex").hide();
    $(".filter-bar :checkbox:checked").each(function() {
        //console.log($(this).attr("class"));
-      $("." + $(this).attr("class")).show();
+      $("." + $(this).attr("class")).fadeIn();
       checker();
    });
+
+   if(!$(".filter-bar :checkbox").is(":checked")){
+
+     $("div.flex").fadeIn();
+     $("div.book").fadeIn();
+   }
   });
+
+
+// recipie filter animatie
+  $(".filter-group.recipie").click(function() {
+   $(this).next().slideUp();
+     $("div.flex").fadeIn();
+
+   $("input").prop( "checked", false);
+   if($(this).next().css("display") == "none"){
+     $(".filter-list").slideUp();
+     $(this).next().slideDown();
+
+   };
+  });
+
+
+
+
+
+
+
+
+
 
 
   var BookNone = $("div.book").css("display", "none");
@@ -78,6 +130,8 @@ $(".content-bar li").click(function() {
  $(this).css("background-color", "#406b76").css("color", "white");
 });
 // end content-bar
+
+
 
 
 
