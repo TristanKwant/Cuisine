@@ -9,9 +9,10 @@
 	<link rel="stylesheet" href="../css/main.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400i,700i|Raleway:400,700" rel="stylesheet">
 
-	<title>New Gibson guitar</title>
+	<title>test</title>
 	<meta name="description" content="Gibson CEO unveils digital guitar">
-
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,10 @@
       <!-- Util menu start -->
       <nav class="util-menu">
         <ul>
-          <li><a href=""><img src="../assets/icons/search.png" alt="Search"></a></li>
+          <li class="search">
+            <img src="../assets/icons/search.png" alt="Search">
+  				  <input class="search-input"type="text" name="last-name" title="Enter your last name" required>
+          </li>
           <li><a href=""><img src="../assets/icons/shopping.png" alt="Shopping chart"></a></li>
         </ul>
       </nav>
@@ -52,7 +56,7 @@
   <div class="banner banner-books">
     <div>
 
-      <h2>week menu</h2>
+      <h2>books</MM-4h2>
 
     </div>
     <img src="../assets/images/banner-books.png" alt="banner food" width="970">
@@ -65,19 +69,19 @@
 
 <!-- start filter blok -->
     <div class=filter-box>
-      <div class="filter-group">
+      <div class="filter-group authors">
         <h3>authors</h3>
         <img src="../assets/icons/plus.png" alt="plus" class="plus">
       </div>
-      <div class="">
+      <div class="author-list">
         <ul>
           <li>
-            <input type="checkbox" name="author1" value="">
+            <input type="checkbox" name="author1" value="" class="david">
             <label for="author1" class="group-filter">David Frenkiel</label>
 
           </li>
           <li>
-            <input type="checkbox" name="author1" value="">
+            <input type="checkbox" name="author1" value="" class="klaas" >
             <label for="author1" class="group-filter">klaas</label>
           </li>
 
@@ -90,16 +94,16 @@
 <!-- eind filter blok -->
 <!-- start filter blok -->
     <div class=filter-box>
-      <div class="filter-group">
+      <div class="filter-group catagories">
         <h3>Catagories</h3>
         <img src="../assets/icons/plus.png" alt="plus" class="plus">
       </div>
 
-      <div class="filter-hide">
+      <div class="filter-hide catagorie-list">
         <ul>
           <li>
-            <input type="checkbox" name="author1" value="">
-            <label for="author1" class="group-filter">David Frenkiel</label>
+            <input type="checkbox" name="author1" value="" class="vegan" >
+            <label for="author1" class="group-filter">vegan</label>
 
           </li>
           <li>
@@ -119,12 +123,13 @@
 
   <div class="books-grid">
 
-  <!-- begin book -->
-    <div class="book">
+<!-- begin book -->
+
+    <div class="book vegan klaas">
       <a href=""><img src="../assets/images/greenkitchen.jpg" alt="green kitchen"></a>
 
       <div class="info">
-        <h2><a href="">Green kitchen travels</a></h2>
+        <h2><a href="green-kitchen.html">Green kitchen klaas vegan</a></h2>
         <p>A collection of delicious, healthy, vegetarian family recipes from the Green Kitchen Stories blog. David Frenkiel and Luise Vindahl Andersen are the new faces of exciting vegetarian food.</p>
 
         <ul class="rating">
@@ -152,11 +157,11 @@
     <!-- eind book -->
 
     <!-- begin book -->
-      <div class="book">
-        <img src="../assets/images/greenkitchen.jpg" alt="">
+      <div id="cashuw" class="book vegan david">
+        <img src="../assets/images/cahywyogurt.png" alt="">
 
         <div class="info">
-          <h2>Green kitchen travels</h2>
+          <h2>Green kitchen david</h2>
           <p>A collection of delicious, healthy, vegetarian family recipes from the Green Kitchen Stories blog. David Frenkiel and Luise Vindahl Andersen are the new faces of exciting vegetarian food.</p>
 
           <ul class="rating">
@@ -184,11 +189,11 @@
       <!-- eind book -->
 
       <!-- begin book -->
-        <div class="book">
+        <div class="book vegan">
           <img src="../assets/images/greenkitchen.jpg" alt="">
 
           <div class="info">
-            <h2>Green kitchen travels</h2>
+            <h2>Green kitchen vegan</h2>
             <p>A collection of delicious, healthy, vegetarian family recipes from the Green Kitchen Stories blog. David Frenkiel and Luise Vindahl Andersen are the new faces of exciting vegetarian food.</p>
 
             <ul class="rating">
@@ -214,6 +219,38 @@
 
         </div>
         <!-- eind book -->
+        <!-- begin book -->
+
+            <div class="book klaas">
+              <a href=""><img src="../assets/images/greenkitchen.jpg" alt="green kitchen"></a>
+
+              <div class="info">
+                <h2><a href="green-kitchen.html">Green kitchen klaas</a></h2>
+                <p>A collection of delicious, healthy, vegetarian family recipes from the Green Kitchen Stories blog. David Frenkiel and Luise Vindahl Andersen are the new faces of exciting vegetarian food.</p>
+
+                <ul class="rating">
+                  <li><img src="../assets/icons/star.png" alt="star"></li>
+                  <li><img src="../assets/icons/star.png" alt="star"></li>
+                  <li><img src="../assets/icons/star.png" alt="star"></li>
+                  <li><img src="../assets/icons/star.png" alt="star"></li>
+                  <li><img src="../assets/icons/star.png" alt="star"></li>
+                </ul>
+
+                <h3>€33.65</h3>
+
+                <div class="add-cta">
+                  <img src="../assets/icons/plus.png" alt="plus" class="plus">
+                  <h3>Add to shopping chart</h3>
+                </div>
+
+                <img src="../assets/icons/hart.png" alt="heart">
+
+              </div>
+
+
+
+            </div>
+            <!-- eind book -->
 </div>
 
 

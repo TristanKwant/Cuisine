@@ -2,7 +2,7 @@
 
 ---
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8" />
@@ -13,7 +13,8 @@
 
 	<title>Cuisine recipes</title>
 	<meta name="description" content="Gibson CEO unveils digital guitar">
-
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
 
 
 
-<!-- week menu section -->
+
 <div class="weekmenu container">
   <div class="banner banner-books">
     <div>
@@ -38,10 +39,113 @@
 
   <div class="flex-container container">
 
+		<div class="filter-bar filter-recipies">
+
+	<!-- start filter blok -->
+	    <div class=filter-box>
+	      <div class="filter-group recipie">
+	        <h3>Dieet</h3>
+	        <img src="../assets/icons/plus.png" alt="plus" class="plus">
+	      </div>
+	      <div class="filter-list">
+	        <ul>
+	          <li>
+	            <input type="checkbox" name="author1" value="" class="vegitarian">
+	            <label for="author1" class="group-filter">vegitarian</label>
+
+	          </li>
+	          <li>
+	            <input type="checkbox" name="author1" value="" class="vegan" >
+	            <label for="author1" class="group-filter">vegan</label>
+	          </li>
+
+
+	        </ul>
+
+	      </div>
+
+	    </div>
+
+	<!-- start filter blok -->
+	    <div class=filter-box>
+	      <div class="filter-group recipie">
+	        <h3>type of meal</h3>
+	        <img src="../assets/icons/plus.png" alt="plus" class="plus">
+	      </div>
+
+	      <div class="filter-list">
+	        <ul>
+	          <li>
+	            <input type="checkbox" name="author1" value="" class="main-meal" >
+	            <label for="author1" class="group-filter">mail meal</label>
+
+	          </li>
+	          <li>
+	            <input type="checkbox" name="author1" value="lunch">
+	            <label for="author1" class="group-filter">lunch</label>
+	          </li>
+						<li>
+	            <input type="checkbox" name="author1" value="breakfast">
+	            <label for="author1" class="group-filter">breakfast</label>
+	          </li>
+						<li>
+	            <input type="checkbox" name="author1" value="starters">
+	            <label for="author1" class="group-filter">starter</label>
+	          </li>
+						<li>
+	            <input type="checkbox" name="author1" value="snacks">
+	            <label for="author1" class="group-filter">snack</label>
+	          </li>
+						<li>
+	            <input type="checkbox" name="author1" value="drinks">
+	            <label for="author1" class="group-filter">drinks</label>
+	          </li>
+
+
+	        </ul>
+
+	      </div>
+
+	    </div>
+	<!-- eind filter blok -->
+
+	<!-- start filter blok -->
+	    <div class=filter-box>
+	      <div class="filter-group recipie">
+	        <h3>region</h3>
+	        <img src="../assets/icons/plus.png" alt="plus" class="plus">
+	      </div>
+
+	      <div class="filter-list">
+
+	        <ul>
+	          <li>
+	            <input type="checkbox" name="author1" value="" class="mexican" >
+	            <label for="author1" class="group-filter">Mexican</label>
+
+	          </li>
+	          <li>
+	            <input type="checkbox" name="author1" value="asian">
+	            <label for="author1" class="group-filter">Asian</label>
+	          </li>
+
+
+	        </ul>
+					<div class="map">
+						<a href="#">View map</a>
+					</div>
+	      </div>
+
+	    </div>
+	<!-- eind filter blok -->
+
+
+
+		</div>
 
 <!-- first row-->
     <div class="flextest">
-			<div class="flex">
+			<div class="flex vegan main-meal">
         <img src="../assets/images/cahywyogurt.png" alt="">
         <h2><a href="../pages/single-recipe.html"> Cahsuw yogurt</a></h2>
       </div>
@@ -53,7 +157,7 @@
         <img src="../assets/images/Tom_Kah.png" alt="">
         <h2>tohm ka salade</h2>
       </div>
-      <div class="flex">
+      <div class="flex vegan">
         <img src="../assets/images/Tom_Kah.png" alt="">
         <h2>tohm ka salade</h2>
       </div>
