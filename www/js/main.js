@@ -24,19 +24,13 @@ $(document).ready(function() {
 
 
 
-  $(".authors .plus").click( function(){
-
-    $(".author-list").slideUp();
-    $(".author-list:hidden").slideDown();
-
-  });
-
-
-
 // filter bar
   $(".filter-bar :checkbox").click(function() {
+    $("input").prop( "checked", false);
+    $(this).prop( "checked", true);
    $("div.book").hide();
    $("div.flex").hide();
+   $("div.banner-recipies").hide();
    $(".filter-bar :checkbox:checked").each(function() {
        //console.log($(this).attr("class"));
       $("." + $(this).attr("class")).fadeIn();
@@ -48,11 +42,12 @@ $(document).ready(function() {
      $("div.flex").fadeIn();
      $("div.book").fadeIn();
    }
+
   });
 
 
 // recipie filter animatie
-  $(".filter-group.recipie").click(function() {
+  $(".filter-group").click(function() {
    $(this).next().slideUp();
      $("div.flex").fadeIn();
 
@@ -63,32 +58,6 @@ $(document).ready(function() {
 
    };
   });
-
-
-
-
-
-
-
-
-
-
-
-  var BookNone = $("div.book").css("display", "none");
-  var david = $(".david").prop("checked");
-  var klaas = $(".klaas").prop("checked");
-  var vegan = $(".vegan").prop("checked");
-  //
-  // // filterbar catagories
-   $(".catagories .plus").click( function(){
-
-  $(".catagorie-list").slideUp();
-   $(".catagorie-list:hidden").slideDown();
-
-  });
-
-
-// single book page
 
 
 
@@ -129,79 +98,9 @@ $(".content-bar li").click(function() {
  $("." + $(this).attr("class")).show();
  $(this).css("background-color", "#406b76").css("color", "white");
 });
-// end content-bar
 
 
 
-
-
-
-
-
-
-//
-// $(".vegan").click(function() {
-//   veganCheck();
-//   checker();
-// });
-//
-//
-//
-//
-//
-//
-// $(".david").click(function() {
-//   davidCheck();
-//   checker();
-//
-//
-// });
-//
-// $(".klaas").click(function() {
-//   KlaasCheck();
-//   //davidCheck();
-//   checker();
-//
-//
-// });
-//
-// function veganCheck(){
-//   if($(".vegan").prop("checked")){
-//     $("div.vegan").css("display", "block");
-//
-//   } else if(!$(".vegan").prop("checked")){
-//     $("div.vegan").css("display", "none");
-//     davidCheck();
-//   }
-// };
-//
-// function davidCheck(){
-//
-//   if($(".david").prop("checked")){
-//     $("div.david").css("display", "block");
-//
-//   } else if(!$(".david").prop("checked")){
-//     $("div.david").css("display", "none");
-//     //veganCheck();
-//     KlaasCheck();
-//   }
-//
-//
-// };
-//
-// function KlaasCheck(){
-//
-//   if($(".klaas").prop("checked")){
-//     $("div.klaas").css("display", "block");
-//
-//   } else if(!$(".klaas").prop("checked")){
-//     $("div.klaas").css("display", "none");
-//     veganCheck();
-//   }
-//
-//
-// };
-//
 function checker(){
 
   if( david && vegan ){
@@ -225,142 +124,23 @@ function checker(){
 
 };
 
+loop();
+	function loop(){
+	$(".banner-content").delay(1000).animate({opacity: "1", left: "2%"}, 500, function(){
 
+		$(".banner-content h2").animate({opacity: "1"},500, function(){
+			$(".cta-menu").animate({opacity: "1", height: "inherit", opacity: "1"}, 300, function(){
+				$(".banner-content").delay(4000).animate({opacity: "0", left: "-100%"},500, function(){
+          $(".banner-content h2").css("opacity", 0);
+          $(".cta-menu").css("opacity",0);
+          loop();
+        });
 
-  // $(".vegan").click(function() {
-  //   if($(".vegan").prop("checked")){
-  //     $("div.vegan").css("display", "block");
-  //
-  //   } else {
-  //     $("div.vegan").css("display", "none");
-  //     checkDavid();
-  //     checkKlaas()
-  //
-  //   }
-  //   multi()
-  // });
-  //
-  // $(".david").click(function() {
-  //   david();
-  //   if($(".david").prop("checked")){
-  //   $("div.david").fadeIn().css("display", "block");
-  //   } else {
-  //     $("div.david").css("display", "none");
-  //     // checkKlaas()
-  //     // checkVegan();
-  //     // multi();
-  //
-  //   }
-  //
-  // });
-  //
-  //
-  // $(".klaas").click(function() {
-  //   if($(".klaas").prop("checked")){
-  //   $("div.klaas").fadeIn().css("display", "block");
-  //   } else {
-  //     $("div.klaas").css("display", "none");
-  //
-  //     // checkDavid();
-  //     // checkVegan();
-  //     // checkKlaas()
-  //   }
-  //   multi()
-  // });
+			});
 
-// function checkDavid(){
-//   if($(".david").prop("checked")){
-//     $("div.david").css("display", "block");
-//   } else {
-//     $("div.david").css("display", "none");
-//   }
-//
-// }
-//
-// function checkVegan(){
-//   if($(".vegan").prop("checked")){
-//     $("div.vegan").css("display", "block");
-//   } else {
-//     $("div.vegan").css("display", "none");
-//   }
-// }
-//
-// function checkKlaas(){
-//   if($(".klaas").prop("checked")){
-//     $("div.klaas").css("display", "block");
-//   } else {
-//     $("div.klaas").css("display", "none");
-//   }
-//
-// }
-
-// function david(){
-//
-//   if($(".david").prop("checked") && $(".vegan").prop("checked")){
-//     $("div.book").css("display", "none");
-//     $("div.david.vegan").css("display", "block");
-//
-//   } else if($(".vegan").prop("checked")){
-//     $("div.book").css("display", "none");
-//     $("div.vegan").css("display", "block");
-//
-//   }
-//
-// }
-//
-//
-//
-// function multi(){
-//
-//
-//   if($(".david").prop("checked") && $(".vegan").prop("checked")){
-//     $("div.book").css("display", "none");
-//     $("div.david.vegan").css("display", "block");
-//
-//   } else if($(".vegan").prop("checked")){
-//     $("div.book").css("display", "none");
-//     $("div.vegan").css("display", "block");
-//
-//   }
-
-  // if($(".klaas").prop("checked") && $(".vegan").prop("checked")){
-  //   $("div.book").css("display", "none");
-  //   $("div.klaas.vegan").css("display", "block");
-  //
-  // } else if($(".vegan").prop("checked")){
-  //   $("div.book").css("display", "none");
-  //   $("div.vegan").css("display", "block");
-  //
-  // }
-
-
-
-  // if($(".david").prop("checked") && $(".klaas").prop("checked")){
-  // $("div.book").css("display", "none");
-  // $("div.klaas.david").css("display", "block");
-  //
-  // }
-
-
-
-
-
-
-// }
-
-
-  // $(".vegan").click(function() {
-  //   if(){
-  //
-  //
-  //
-  //   }
-  //   $("div.vegan").fadeToggle(this.checked);
-  // });
-
-
-
-
+		});
+	});
+	}
 
 
 

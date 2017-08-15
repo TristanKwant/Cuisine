@@ -134,6 +134,7 @@ header .search-input {
   margin-right: 20px;
   float: left;
   height: 350px;
+  width: 227px;
 }
 .flextest .flex h2 {
   padding: 10px;
@@ -146,7 +147,7 @@ header .search-input {
   font-weight: 700;
 }
 
-.flextest div:last-child {
+.flex:nth-child(4n+0) {
   margin-right: 0;
 }
 
@@ -401,7 +402,6 @@ footer .copyright {
   margin-right: 10px;
 }
 .books-grid .book {
-  display: none;
   margin-left: 30px;
   overflow: hidden;
   margin-bottom: 30px;
@@ -471,6 +471,17 @@ footer .copyright {
   margin-bottom: 160px;
 }
 
+.banner-recipies {
+  position: relative;
+}
+.banner-recipies .banner-content {
+  opacity: 0;
+}
+
+.banner-recipies {
+  margin-bottom: 50px;
+  float: left;
+}
 .banner-recipies > div {
   width: 30%;
   background-color: rgba(105, 138, 148, 0.1);
@@ -478,12 +489,17 @@ footer .copyright {
   padding-right: 20px;
   height: auto;
   margin-left: 20px;
+  border: 3px solid #fed400;
+  position: absolute;
+  top: 20px;
+  left: -100%;
 }
 .banner-recipies h2 {
   position: static;
   margin: 10px 0 20px 0;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
+  opacity: 0;
 }
 .banner-recipies p {
   font-size: 20px;
@@ -491,6 +507,9 @@ footer .copyright {
   margin-bottom: 20px;
 }
 
+.cta-menu {
+  opacity: 0;
+}
 .cta-menu h3 {
   background-color: #fed400;
   display: inline-block;
@@ -500,6 +519,10 @@ footer .copyright {
   margin: 0;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
+}
+
+.flex-test a {
+  width: 400px;
 }
 
 .new-arrivals {
@@ -625,6 +648,9 @@ footer .copyright {
 .recipe-section ul, .recipe-section ol {
   font-family: "Raleway", sans-serif;
   font-size: 17px;
+}
+.recipe-section ul li:empty, .recipe-section ol li:empty {
+  list-style: none;
 }
 .recipe-section ul li, .recipe-section ol li {
   margin: 20px 0;
@@ -799,9 +825,6 @@ footer .copyright {
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
 }
-.filter-recipies .filter-list {
-  display: none;
-}
 .filter-recipies .map {
   text-align: center;
   margin-bottom: 5px;
@@ -811,4 +834,8 @@ footer .copyright {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
+}
+
+.filter-list {
+  display: none;
 }

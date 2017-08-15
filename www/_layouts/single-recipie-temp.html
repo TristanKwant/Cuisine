@@ -1,0 +1,114 @@
+---
+
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum- scale=1.0, user-scalable=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400i,700i|Raleway:400,700" rel="stylesheet">
+
+	<title>{{ page.title }} - cuisine</title>
+	<meta name="description" content="Gibson CEO unveils digital guitar">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../../js/main.js"></script>
+
+</head>
+
+<body>
+{% include header.html %}
+
+
+<div class="container">
+
+<!-- start top section -->
+  <div class="top-section recipe-single">
+    <img src="../../assets/images/recipies/{{ page.plaatje }}" alt="foto">
+
+    <div class="content-recipe">
+      <div>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.descr }}</p>
+      </div>
+      <ul>
+        <li><span>Serves: </span>{{ page.serves }}</li>
+        <li><span>Time: </span>{{ page.time }}</li>
+        <li><span>Dificulty: </span>{{ page.difficulty }}</li>
+      </ul>
+
+      <div class="tags">
+        <ul>
+          <li>{{ page.tag1 }}</li>
+          <li>{{ page.tag2 }}</li>
+          <li>{{ page.tag3 }}</li>
+        </ul>
+      </div>
+
+      <div class="share">
+        <h3>Share this recipe</h3>
+        <div>
+          <a href=""><img src="../../assets/images/share-facebook.png" alt="Facebook"></a>
+          <a href=""><img src="../../assets/images/share-pintrest.png" alt="Facebook"></a>
+          <a href=""><img src="../../assets/images/share-twitter.png" alt="Facebook"></a>
+        </div>
+
+      </div>
+
+      <div class="found-in">
+        <img src="../../assets/images/foundin.png" alt="book">
+        <div>
+          <h3>Found in</h3>
+          <h2>{{ page.found-title}}</h2>
+          <p>By: {{ page.found-by}}</p>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- eind top sectie -->
+
+
+<div class="recipe-section">
+  <div class="ingredients">
+    <ul>
+      <li>{{ page.item1}}</li>
+      <li>{{ page.item2}}</li>
+      <li>{{ page.item3}}</li>
+      <li>{{ page.item4}}</li>
+      <li>{{ page.item5}}</li>
+      <li>{{ page.item6}}</li>
+      <li>{{ page.item7}}</li>
+      <li>{{ page.item8}}</li>
+      <li>{{ page.item9}}</li>
+      <li>{{ page.item10}}</li>
+      <li>{{ page.item11}}</li>
+      <li>{{ page.item12}}</li>
+    </ul>
+  </div>
+
+  <div class="instructions">
+    <h2>Instuctions</h2>
+    <ol>
+      <li>{{ page.step1 }}</li>
+      <li>{{ page.step2 }}</li>
+      <li>{{ page.step3 }}</li>
+      <li>{{ page.step4 }}</li>
+      <li>{{ page.step5 }}</li>
+      <li>{{ page.step6 }}</li>
+      <li>{{ page.step7 }}</li>
+
+    </ol>
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+{% include footer.html %}
+</body>
+</html>

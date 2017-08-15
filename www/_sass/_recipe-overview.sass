@@ -1,22 +1,43 @@
 .banner-recipies
+
+  position: relative
+  .banner-content
+    opacity: 0
+
+.banner-recipies
+  margin-bottom: 50px
+  float: left
   >div
+
     width: 30%
     background-color: $lightest
     padding-left: 20px
     padding-right: 20px
     height: auto
     margin-left: 20px
+    border: 3px solid $contrast-color
+    position: absolute
+    top: 20px
+    left: -100%
+
+    //width: 40%
+    //height: 80%
+
   h2
     position: static
     margin: 10px 0 20px 0
     font-family: $menu-text
     font-style: normal
+    opacity: 0
+
   p
     font-size: 20px
     margin: 0
     margin-bottom: 20px
 
 .cta-menu
+  opacity: 0
+  
   h3
     background-color: $contrast-color
     display: inline-block
@@ -26,3 +47,8 @@
     margin: 0
     margin-bottom: 20px
     letter-spacing: 0.1em
+
+
+.flex-test
+  a
+    width: 400px
