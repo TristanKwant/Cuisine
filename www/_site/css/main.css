@@ -129,9 +129,11 @@ header .search-input {
 
 .flextest {
   margin-top: 10px;
+  padding-left: 6px;
 }
 .flextest .flex {
-  margin-right: 20px;
+  margin-right: 6px;
+  margin-left: 6px;
   float: left;
   height: 350px;
   width: 227px;
@@ -145,10 +147,6 @@ header .search-input {
 }
 .flextest .flex a:hover {
   font-weight: 700;
-}
-
-.flex:nth-child(4n+0) {
-  margin-right: 0;
 }
 
 .cta-button-big {
@@ -327,6 +325,12 @@ footer .copyright {
 .cta-button h3 {
   margin: 5px;
   padding: 0 5px 0 5px;
+}
+
+#container {
+  max-width: 970px;
+  height: 500px;
+  margin: 0 auto;
 }
 
 .banner-books {
@@ -838,4 +842,30 @@ footer .copyright {
 
 .filter-list {
   display: none;
+}
+
+.maps {
+  display: none;
+}
+
+.error {
+  visibility: hidden;
+  color: red;
+}
+
+form .veld {
+  color: #AAA;
+  font-style: italic;
+}
+
+.error-404 {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+.error-404 h1 {
+  margin: 30px 0;
+  font-size: 4em;
+  line-height: 1;
+  letter-spacing: -1px;
 }

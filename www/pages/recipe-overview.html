@@ -105,23 +105,31 @@
 	        <img src="../assets/icons/plus.png" alt="plus" class="plus">
 	      </div>
 
-	      <div class="filter-list">
+	      <div class="filter-list region">
 
 	        <ul>
 	          <li>
-	            <input type="checkbox" name="author1" value="" class="mexican" >
-	            <label for="author1" class="group-filter">Mexican</label>
+	            <input type="checkbox" name="author1" value="" class="eur" >
+	            <label for="author1" class="group-filter">european</label>
 
 	          </li>
 	          <li>
-	            <input type="checkbox" name="author1" value="asian">
+	            <input type="checkbox" name="author1" value="" class="asia">
 	            <label for="author1" class="group-filter">Asian</label>
+	          </li>
+            <li>
+	            <input type="checkbox" name="author1" value="am" class="am">
+	            <label for="author1" class="group-filter">america</label>
+	          </li>
+            <li>
+	            <input type="checkbox" name="author1" value="am" class="south-am">
+	            <label for="author1" class="group-filter">South America</label>
 	          </li>
 
 
 	        </ul>
 					<div class="map">
-						<a href="#">View map</a>
+						<h3>View map</h3>
 					</div>
 	      </div>
 
@@ -130,41 +138,57 @@
 
 
 
-		</div>
+</div>
+<!-- eind filterbar -->
+<div class="maps">
+  <img src="../assets/images/map/map-original.jpg" alt="world map" usemap="#Map" id="map-original" width="992" height="590">
+  <map name="Map" id="map">
+
+    <!-- america -->
+    <area id="am" alt="america" title="" href="#" shape="poly" onmouseover="swapImage('map-original', 'map-am.jpg', 'fans', 'over');" onmouseout="swapImage('map-original', 'map-original.jpg', 'fans' );" coords="250,344,246,340,240,342,235,340,233,334,236,329,236,325,227,320,221,322,218,321,221,315,225,310,223,306,218,307,213,310,212,314,209,316,206,314,202,313,199,310,197,302,196,294,197,286,203,283,209,282,216,281,226,279,233,280,240,293,244,295,241,285,237,275,254,267,257,257,269,242,276,234,282,230,287,235,297,231,298,226,291,229,285,225,285,221,287,218,281,218,275,221,273,219,276,216,280,214,287,212,294,213,300,213,313,210,313,202,310,198,305,194,297,190,294,184,292,179,290,176,284,176,282,181,280,183,274,179,271,173,270,169,267,167,265,164,282,166,295,146,288,142,276,131,271,125,255,117,245,110,244,100,253,92,258,84,269,75,280,67,292,63,296,60,267,54,235,55,215,62,198,69,174,77,141,86,129,94,121,102,118,115,115,124,104,130,90,134,54,127,33,124,20,126,9,132,4,140,6,149,8,162,10,169,21,182,29,188,14,196,36,183,42,179,47,170,56,169,71,173,89,180,101,190,115,214,123,226,124,245,128,256,135,265,144,274,149,287,156,299,158,295,156,287,151,278,162,287,176,310,191,322,205,321,223,329,228,338,235,344,243,347" />
+
+    <area id="south-am" alt="south america" title="" href="#" shape="poly" onmouseover="swapImage('map-original', 'map-south-am.jpg');" onmouseout="swapImage('map-original', 'map-original.jpg');" coords="250,344,259,334,275,335,290,340,304,345,312,350,323,354,329,362,327,368,336,371,348,376,366,380,370,385,365,397,360,405,357,420,352,432,341,434,332,437,330,445,331,448,319,463,310,470,304,469,303,479,292,483,288,491,284,499,279,505,279,509,284,513,276,517,273,523,277,530,282,535,287,537,275,540,265,538,261,531,255,516,255,505,260,495,263,489,262,477,268,458,271,431,268,415,253,412,247,398,242,386,241,380,243,367,253,357" />
+
+    <area id="eur" alt="europe" title="" href="#" shape="poly" onmouseover="swapImage('map-original', 'map-eur.jpg');" onmouseout="swapImage('map-original', 'map-original.jpg');" coords="441,259,450,261,461,256,468,250,472,246,476,240,485,237,489,236,495,244,509,247,509,252,500,255,505,259,512,254,516,250,508,244,503,236,502,232,512,238,519,245,519,253,522,258,526,258,533,257,531,252,534,248,539,253,540,257,552,240,568,237,584,243,595,239,594,232,606,228,607,234,610,218,610,204,613,194,615,188,615,183,619,177,627,171,630,161,634,154,641,146,645,138,635,131,630,128,626,120,632,110,643,106,657,103,657,94,644,95,619,100,616,109,611,118,611,125,616,137,600,143,594,145,592,140,581,144,575,138,560,134,553,130,549,125,544,123,530,125,514,129,503,144,494,155,485,162,479,166,480,175,485,183,489,199,480,207,472,210,470,204,464,198,458,193,459,188,458,183,457,179,452,182,449,188,444,196,439,200,436,207,443,209,450,211,456,212,452,218,457,221,463,228,464,236,464,241,456,239,452,238,447,239,442,242,439,244,440,253" />
+
+    <area id="asia" alt="asia" title="" href="#" shape="poly" onmouseover="swapImage('map-original', 'map-asia.jpg');" onmouseout="swapImage('map-original', 'map-original.jpg');" coords="539,249,560,261,557,273,555,277,563,287,587,328,632,308,621,295,639,291,662,306,678,346,717,305,731,323,736,335,731,353,760,382,779,390,786,391,808,375,813,332,807,323,803,316,795,320,799,331,790,342,779,359,756,361,751,350,767,337,769,329,762,315,788,303,800,291,801,275,796,255,814,257,817,270,825,277,855,266,862,245,865,221,860,199,845,196,862,181,893,184,896,206,902,218,927,184,978,161,988,152,928,129,842,119,817,117,788,109,765,108,762,94,741,91,690,106,652,123,630,131,631,151,627,169,615,198,606,214,595,230,587,241,576,249,557,255" />
+
+</map>
+</div>
 
 <!-- first row-->
     <div class="flextest">
-			<div class="flex vegan main-meal">
-        <img src="../assets/images/thumbs/recipies/banana-blossom-salad.png" alt="">
+			<div class="flex vegan main-meal asia">
+        <img src="../assets/images/thumbs/recipies/banana-blossom-salad.png" alt="banana blossom salad">
         <h2><a href="../pages/recipies/vietnamese-salad.html"> Vietnamese Banana Blossom Salad</a></h2>
       </div>
-      <div class="flex ">
-        <img src="../assets/images/thumbs/recipies/tom-kah.png" alt="">
+      <div class="flex asia">
+        <img src="../assets/images/thumbs/recipies/tom-kah.png" alt="thom kah salad">
         <h2><a href="../pages/recipies/tom-kah.html"> Tom Kha Tofu</a></h2>
       </div>
-      <div class="flex">
-        <img src="../assets/images/thumbs/recipies/curry.png" alt="">
+      <div class="flex asia">
+        <img src="../assets/images/thumbs/recipies/curry.png" alt="curry monkfish">
         <h2><a href="../pages/recipies/monk-curry.html"> Sri Lankan-style monkfish curry</a></h2>
       </div>
-      <div class="flex vegan">
-        <img src="../assets/images/thumbs/recipies/chia-berry-porridge.png" alt="">
+      <div class="flex vegan eur">
+        <img src="../assets/images/thumbs/recipies/chia-berry-porridge.png" alt="chia berry porridge">
         <h2><a href="../pages/recipies/chia-raspberry-breakfast.html"> Chia &amp; Raspberry Breakfast</a></h2>
       </div>
-			<div class="flex vegan">
-        <img src="../assets/images/thumbs/recipies/fish1.png" alt="">
+			<div class="flex vegan south-am">
+        <img src="../assets/images/thumbs/recipies/fish1.png" alt="lemon fish">
         <h2><a href="../pages/recipies/lemon-chipotle.html"> Lemon sole with chipotle</a></h2>
       </div>
 			<div class="flex">
-        <img src="../assets/images/thumbs/recipies/fish2.png" alt="">
+        <img src="../assets/images/thumbs/recipies/fish2.png" alt="salmon">
         <h2><a href="../pages/recipies/salmon-sweet.html"> Asian salmon &amp; sweet potato</a></h2>
       </div>
 
-			<div class="flex">
-        <img src="../assets/images/thumbs/recipies/lemongrass-curry.png" alt="">
+			<div class="flex asia">
+        <img src="../assets/images/thumbs/recipies/lemongrass-curry.png" alt="lemongrass curry">
         <h2><a href="../pages/recipies/lemongrass-aubergine-curry.html"> Aubergine &amp; Lemongrass Curry</a></h2>
       </div>
 			<div class="flex">
-        <img src="../assets/images/thumbs/recipies/pork.png" alt="">
+        <img src="../assets/images/thumbs/recipies/pork.png" alt="pork noodles">
         <h2><a href="../pages/recipies/pork-noodle.html"> Pork tonkatsu &amp; noodles</a></h2>
       </div>
 
@@ -184,38 +208,38 @@
 			</div>
 
 			<div class="flex">
-        <img src="../assets/images/thumbs/recipies/protein-boosted-oatmeal.png" alt="">
+        <img src="../assets/images/thumbs/recipies/protein-boosted-oatmeal.png" alt="prtein oatmeal">
         <h2><a href="../pages/recipies/oatmeal.html"> Protein Boosted Oatmeal</a></h2>
       </div>
       <div class="flex">
-        <img src="../assets/images/thumbs/recipies/smashed-tomato-pasta.png" alt="">
+        <img src="../assets/images/thumbs/recipies/smashed-tomato-pasta.png" alt="tomato pasta">
         <h2><a href="../pages/recipies/summer-tomato.html"> Summer Pasta with Smashed Tomatoes</a></h2>
       </div>
-      <div class="flex">
-        <img src="../assets/images/thumbs/recipies/spaghetti-squash.png" alt="">
+      <div class="flex am">
+        <img src="../assets/images/thumbs/recipies/spaghetti-squash.png" alt="spegetti">
         <h2><a href="../pages/recipies/spaghetti-squash.html"> Spaghetti with Beluga Lentils, Pesto </a></h2>
       </div>
       <div class="flex">
-        <img src="../assets/images/thumbs/recipies/turmeric-breakfast-muffins.png" alt="">
+        <img src="../assets/images/thumbs/recipies/turmeric-breakfast-muffins.png" alt="muffins">
         <h2><a href="../pages/single-recipe.html"> Turmeric Breakfast Muffins</a></h2>
       </div>
 			<div class="flex vegan snack ">
-        <img src="../assets/images/thumbs/recipies/vegan-apple-tartlets.png" alt="">
+        <img src="../assets/images/thumbs/recipies/vegan-apple-tartlets.png" alt="tarts">
         <h2><a href="../pages/recipies/vegan-tart.html"> Vegan Apple &amp; Oat Tartlets</a></h2>
       </div>
 
       <div class="flex">
-        <img src="../assets/images/thumbs/recipies/gingerbread-smoothie.png" alt="">
+        <img src="../assets/images/thumbs/recipies/gingerbread-smoothie.png" alt="ginger smoothie">
         <h2><a href="../pages/single-recipe.html"> Gingerbread Shake</a></h2>
       </div>
 
       <div class="flex">
-        <img src="../assets/images/thumbs/recipies/buckwheatporridge.png" alt="">
+        <img src="../assets/images/thumbs/recipies/buckwheatporridge.png" alt="buckwheat porridge">
         <h2><a href="../pages/single-recipe.html"> Winter Buckwheat Porridge</a></h2>
       </div>
 
       <div class="flex">
-        <img src="../assets/images/thumbs/recipies/raw-brownies.png" alt="">
+        <img src="../assets/images/thumbs/recipies/raw-brownies.png" alt="brownies">
         <h2><a href="../pages/single-recipe.html"> Raw Hazelnut &amp; Chai Brownies</a></h2>
       </div>
 
@@ -223,6 +247,7 @@
 
 
   </div><!-- end thumbs -->
+
 
 
 

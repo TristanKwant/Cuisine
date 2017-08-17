@@ -19,18 +19,22 @@
 
 </div>
 
-<form class="contact-form" action="index.html" method="post">
+<!-- start form -->
+<form id="contactForm" class="contact-form" action="#" method="post">
 	<fieldset>
 
 		<div class="names">
 			<div>
-				<label for="first-name">First name</label>
-				<input type="text" name="first-name" title="Enter your First name" required>
+				<label for="first-name">First name
+				<span class="error" id="fname-error">- required</span></label>
+				<input class="veld" id="first-name" type="text" name="first-name" title="Enter your First name" >
+
 			</div>
 
 			<div class="last-name">
-				<label for="last-name">Last name</label>
-				<input type="text" name="last-name" title="Enter your last name" required>
+				<label for="last-name">Last name
+				<span class="error" id="lname-error">- required</span></label>
+				<input  class="veld"id="last-name" type="text" name="last-name" title="Enter your last name" >
 			</div>
 		</div>
 
@@ -38,21 +42,24 @@
 
 
 		<div class="mail">
-			<label for="email">Email</label>
-			<input type="email" name="email" title="Enter your email adress" required>
+			<label for="email">Email
+			<span class="error" id="email-error">- required</span></label>
+			<input class="veld" id="email" type="text" name="email"  title="Enter your email adress" >
 		</div>
 
 		<div class="phone">
-			<label for="phone">Phone</label>
-			<input type="tel" name="phone" title="Enter your phone number" required>
+			<label for="phone">Phone
+			<span class="error" id="tel-error">- required</span></label>
+			<input class="veld" id="tel" type="tel" name="phone" title="Enter your phone number" >
 		</div>
 
 
 
 		<div>
-			<label for="country">Country</label>
-			<select>
-
+			<label for="country">Country
+			<span class="error" id="con-error">- required</span></label>
+			<select id="country">
+				<option value="">select country</option>
 				<option value="AFG">Afghanistan</option>
 				<option value="ALA">Åland Islands</option>
 				<option value="ALB">Albania</option>
@@ -307,13 +314,18 @@
 	</fieldset>
 
 		<div class="subject">
-			<label for="subject">Subject</label>
-			<input type="text" name="subject" title="Enter your message" required>
+			<label for="subject">Subject
+			<span class="error" id="sub-error">- required</span></label>
+			<input class="veld" id="sub" type="text" name="subject" title="Enter your message" >
 		</div>
 
 		<div class="message" >
-			<label for="message">Subject</label>
-			<textarea name="message" rows="10" cols="50"></textarea>
+			<label for="message">messgas
+			<span class="error" id="mes-error">- required</span></label>
+			<textarea class="veld" id="mes" name="message" rows="10" cols="50"></textarea>
+		</div>
+		<div class="sub">
+			<input type="submit" value="Verstuur" />
 		</div>
 
 
@@ -321,12 +333,13 @@
 
 
 </form>
-
+<!-- end form -->
 
 
 </div>
 
 
 {% include footer.html %}
+<script src="../js/validate.js"></script>
 </body>
 </html>

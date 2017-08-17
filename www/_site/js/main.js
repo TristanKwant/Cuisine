@@ -1,6 +1,13 @@
 
 
 $(document).ready(function() {
+  $('img[usemap]').rwdImageMaps();
+
+  if(!$("#theTarget").length == 0){
+    $("#theTarget").skippr({
+      autoPlay: true,
+    });
+  };
 
   // header
 
@@ -28,14 +35,8 @@ $(document).ready(function() {
   $(".filter-bar :checkbox").click(function() {
     $("input").prop( "checked", false);
     $(this).prop( "checked", true);
-   $("div.book").hide();
-   $("div.flex").hide();
-   $("div.banner-recipies").hide();
-   $(".filter-bar :checkbox:checked").each(function() {
-       //console.log($(this).attr("class"));
-      $("." + $(this).attr("class")).fadeIn();
-      checker();
-   });
+    $(".maps").slideUp(500);
+    filterRecipie();
 
    if(!$(".filter-bar :checkbox").is(":checked")){
 
@@ -43,7 +44,26 @@ $(document).ready(function() {
      $("div.book").fadeIn();
    }
 
+   if($(this).hasClass("region")){
+     setImg(this);
+   }
+
+
   });
+
+  function filterRecipie(){
+    $("div.book").hide();
+    $("div.flex").hide();
+    $("div.banner-recipies").hide();
+    $(".filter-bar :checkbox:checked").each(function() {
+        //console.log($(this).attr("class"));
+       $("." + $(this).attr("class")).fadeIn();
+       //checker();
+    });
+
+
+
+  }
 
 
 // recipie filter animatie
@@ -101,28 +121,28 @@ $(".content-bar li").click(function() {
 
 
 
-function checker(){
-
-  if( david && vegan ){
-    $("div.book").css("display", "none");
-    $("div.david.vegan").css("display", "block");
-  }
-  if(klaas && vegan ){
-    $("div.book").css("display", "none");
-    $("div.klaas.vegan").css("display", "block");
-  }
-  if(klaas && david ){
-    $("div.book").css("display", "none");
-    $("div.klaas, div.david").css("display", "block");
-  }
-
-
-  if(klaas && vegan && david ){
-    $("div.book").css("display", "none");
-    $("div.klaas.vegan, div.david.vegan").css("display", "block");
-  }
-
-};
+// function checker(){
+//
+//   if( david && vegan ){
+//     $("div.book").css("display", "none");
+//     $("div.david.vegan").css("display", "block");
+//   }
+//   if(klaas && vegan ){
+//     $("div.book").css("display", "none");
+//     $("div.klaas.vegan").css("display", "block");
+//   }
+//   if(klaas && david ){
+//     $("div.book").css("display", "none");
+//     $("div.klaas, div.david").css("display", "block");
+//   }
+//
+//
+//   if(klaas && vegan && david ){
+//     $("div.book").css("display", "none");
+//     $("div.klaas.vegan, div.david.vegan").css("display", "block");
+//   }
+//
+// };
 
 loop();
 	function loop(){
@@ -143,7 +163,143 @@ loop();
 	}
 
 
+// map
+  $(".map").click(function(){
+
+    $(".maps").slideToggle(500);
+
+  });
+
+  $("area").click(function(){
+    $("input").prop( "checked", false);
+    $("." + $(this).attr("id")).prop( "checked", true);
+    $(".maps").slideUp(500)
+    filterRecipie()
+
+
+  });
+
+  function setImg(i){
+    var img = "../assets/images/map/map-" + $(i).attr("class") + ".jpg";
+    $("#map-original").delay(500).attr("src", img);
+  }
+
+
+
+// $("form").submit(function(){
+//
+//   var fname = $("#fist-name").val();
+//   if(fname.length <= 1 || naam == ""){
+//     $(".error").show();
+//   };
+
+
+
+
+
+
+// })
+
+
+
 
 
 
 });
+
+
+
+// image map
+
+
+		//  kent de browser afbeeldingen??
+		var canSwap = document.images? true : false;
+		// het geselecteerde plaatjes als de pagina geladen is
+		var selImage = 0;
+
+
+		// de afbeeldingen die ingeladen moeten worden
+		// afbeeldingen van imac pagina
+		var plaatjesArray = [
+			"imac-speakers.jpg",
+			"imac-fans.jpg",
+			"imac-geheugen.jpg",
+			"imac-io.jpg",
+		];
+		//afbeeldingen van accoires pagina
+		var plaatjesArray2 = [
+			"imac-keyboard.jpg",
+			"imac-mouse.jpg",
+			"imac-trackpad.jpg"
+		];
+
+		var ingeladenPlaatjes = [];
+
+
+
+// Preloader afmaken
+		function preloadImages(){
+
+			if( canSwap ){
+				var array
+
+				if (document.getElementById("map-imac")) {
+					array = plaatjesArray;
+				}
+				if (document.getElementById("map-acc")) {
+					array = plaatjesArray2;
+				}
+
+				for( var i = 0; i < array.length; i++ ){
+
+					// maak een virtueel plaatje aan
+					ingeladenPlaatjes[i] = new Image();
+					// ken daar een src aan toe
+					ingeladenPlaatjes[i].src = imagePad + array[i];
+
+				}
+
+			}
+
+		}
+
+
+
+
+		function swapImage( welkPlaatje, waarin, imageId, loc ){
+			var id = imageId;
+			var plaatje = document.getElementById(welkPlaatje);
+
+			if( canSwap ){ // als canSwap true is
+
+
+					plaatje.src = "../assets/images/map/" + waarin;
+
+					//contentSwap(id, loc);
+			}
+
+		}
+
+		function contentSwap(id, loc){
+			var content = document.getElementById(id);
+				if (loc == "over"){
+					document.getElementById("original").style.display = "none";
+					content.style.display = "block";
+
+				} else {
+					document.getElementById("original").style.display = "block";
+					content.style.display = "none";
+				}
+
+
+
+
+
+		}
+// preloader afmaken
+
+		// window.onload = function(){
+		// 	preloadImages();
+    //
+    //
+		// }
