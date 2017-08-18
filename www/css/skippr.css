@@ -43,7 +43,7 @@
 .skippr-nav-element {
 	cursor:pointer;
 	float:left;
-	background-color: rgba(255,255,255,0.5);
+	background-color: #406b76;
 	-webkit-transition: all .25s linear;
 	transition: all .25s linear;
 }
@@ -88,14 +88,14 @@
 	left:2.5%;
 	-webkit-transform:rotate(-45deg);
 	transform:rotate(-45deg);
-	border-top:2px solid white;
-	border-left:2px solid white;
+	border-top:2px solid #406b76;
+	border-left:2px solid #406b76;
 }
 
 .skippr-next {
 	right:3.5%;
 	-webkit-transform:rotate(-45deg);
 	transform:rotate(-45deg);
-	border-bottom:2px solid white;
-	border-right:2px solid white;
+	border-bottom:2px solid #406b76;
+	border-right:2px solid #406b76;
 }

@@ -116,8 +116,9 @@ a:hover
         color: $dark-color
   img
     float: left
+
 .content-recipe
-  width: 60%
+  width: 55%
   float: right
 
   div:first-child
@@ -266,10 +267,11 @@ a:hover
 // about page
 
 .about-text
-  width: 400px
+  max-width: 400px
   font-size: 18px
   margin-bottom: 100px
   margin-top: 50px
+  padding: 0 10px
 
 .about-container
   overflow: hidden
@@ -305,6 +307,8 @@ a:hover
     display: inline-block
   li::before
     content: " | "
+.content-area
+  padding: 0 20px
 
 .content-bar
   background-color: $lightest
@@ -397,3 +401,6 @@ form
     font-size: 4em
     line-height: 1
     letter-spacing: -1px
+
+
+@import mediaq

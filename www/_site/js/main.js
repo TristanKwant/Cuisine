@@ -1,7 +1,12 @@
 
 
 $(document).ready(function() {
-  $('img[usemap]').rwdImageMaps();
+
+
+  if(!$('img[usemap]').length == 0){
+    $('img[usemap]').rwdImageMaps();
+
+  }
 
   if(!$("#theTarget").length == 0){
     $("#theTarget").skippr({
@@ -9,13 +14,15 @@ $(document).ready(function() {
     });
   };
 
-  // header
+
+
+  // header search
 
   var cl = 0;
   $(".search img").click( function(){
 
     if(cl == 0){
-      $(".search-input").show().animate({width: "300px"});
+      $(".search-input").show().animate({maxWidth: "300px"});
       cl = 1;
     } else if(cl == 1){
       $(".search-input").animate({width: "0px"}, function(){
@@ -29,9 +36,35 @@ $(document).ready(function() {
 
   });
 
+// ham menu
+
+$(".ham").click(function(){
+  var header = $("header");
+  if(header.css("height") == "90px"){
+    header.animate({height: "100%"});
+
+  } else {
+    header.animate({height: 90});
+  };
+});
+
+
 
 
 // filter bar
+
+$("#filter-toggle").click(function(){
+  var bar = $(".filter-bar");
+
+  if(bar.css("height") == "50px"){
+    bar.animate({height: "100%"});
+
+  } else {
+    bar.animate({height: 50});
+  };
+
+});
+
   $(".filter-bar :checkbox").click(function() {
     $("input").prop( "checked", false);
     $(this).prop( "checked", true);
