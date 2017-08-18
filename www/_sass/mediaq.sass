@@ -12,6 +12,8 @@
     nav li
       float: none
 
+  //filter bar
+
   .filter-bar, .filter-recipies
     width: 100%
     float: none
@@ -22,6 +24,8 @@
     .filter-box
       width: 90%
       display: inline-block
+
+  // books overview
 
   .books-grid
     float: none
@@ -36,9 +40,13 @@
       display: none
     .book .info
       width: 50%
+
+  // recipies overview
+
   .banner-recipies
     display: none
-
+  .flextest .flex
+    max-width: 30%
 
 
 
@@ -61,6 +69,8 @@
       li:last-child
         padding-right: 0
 
+  // hero slider
+
   footer .footer-menu nav ul
     padding: 0
     padding-left: 10px
@@ -69,6 +79,7 @@
     .cta-button
       display: none
     .hero-text
+      margin: 0 auto
       float: none
       margin-top: 50px
 
@@ -86,10 +97,12 @@
       float: none
     .books:first-child
       margin-right: 20px
+  // contact form
 
   form
     padding: 0 10px
 
+  //single recipe
   .top-section.recipe-single
     text-align: center
     img
@@ -101,16 +114,46 @@
     width: 100%
     float: none
 
+  // about text
+
+  .about-text
+    max-width: 100%
+  .about-container
+    .lcol
+      margin-left: 20px
+      margin-right: 20px
+    .rcol
+      float: none
+      margin-left: 20px
+      margin-right: 20px
+
+  // home text
+
+  .text-dump
+    max-width: 100%
+    margin: 50px 20px 50px 20px
+
+    h1
+      font-family: $menu-text-dec
+      font-style: italic
+      font-weight: bold
+    p
+      font-family: $body-text
 
 
+  // map
 
-
+  .maps, .map
+    display: none !important
 
 
 
 @media screen and (max-width: 480px)
   body
     background-color: lightblue
+
+  .banner-books h2
+    width: 30%
   .books-grid
     width: 100%
     display: block
@@ -158,6 +201,7 @@
 
     .filter-box, .filter-recipies
       //display: none
+      text-align: left
       width: 80%
       display: inline-block
 
@@ -168,3 +212,9 @@
       display: block
     nav li:last-child
       padding-right: 10px
+
+  // recipie overview
+  .flex-container
+    //text-align: center
+    .flextest .flex
+      max-width: 46%

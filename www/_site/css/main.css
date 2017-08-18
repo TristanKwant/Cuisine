@@ -94,7 +94,7 @@ header nav.util-menu ul {
 }
 header .search-input {
   display: none;
-  maxwidth: 0;
+  width: 0;
 }
 
 .weekmenu {
@@ -130,27 +130,26 @@ header .search-input {
 
 .flex-container {
   overflow: hidden;
-  margin: 0 auto;
 }
 
 .flextest {
   margin-top: 10px;
   padding-left: 6px;
   max-width: 970px;
-  margin: 0 auto;
-  text-align: center;
 }
 .flextest .flex {
   margin-right: 5px;
   margin-left: 5px;
+  cursor: pointer;
   display: inline-block;
   font-size: 0;
-  height: 350px;
-  max-width: 227px;
+  max-width: 23.3%;
+  margin-bottom: 20px;
   vertical-align: top;
 }
 .flextest .flex h2 {
   padding: 10px;
+  margin-bottom: 20px;
 }
 .flextest .flex a {
   font-size: 23px;
@@ -191,8 +190,8 @@ header .search-input {
 }
 
 .text-dump {
-  width: 40%;
-  margin: 200px 0 200px 150px;
+  max-width: 40%;
+  margin: 60px 0 100px 100px;
 }
 .text-dump h1 {
   font-family: "Playfair Display", serif;
@@ -389,6 +388,7 @@ footer .copyright {
 }
 .filter-bar .filter-box .filter-group {
   overflow: hidden;
+  cursor: pointer;
 }
 .filter-bar .filter-box .filter-group h3 {
   margin: 0;
@@ -842,6 +842,24 @@ footer .copyright {
   margin: 0;
 }
 
+.vid .medium {
+  display: none;
+}
+
+.vid nav {
+  font-family: "Montserrat", sans-serif;
+}
+.vid nav ul {
+  padding: 0;
+}
+.vid nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0 20 0 0px;
+  cursor: pointer;
+}
+
 .filter-recipies {
   float: none;
   width: 100%;
@@ -945,6 +963,10 @@ form .veld {
     display: none;
   }
 
+  .flextest .flex {
+    max-width: 30%;
+  }
+
   footer .social {
     height: auto;
     text-align: center;
@@ -978,6 +1000,7 @@ form .veld {
     display: none;
   }
   .hero .hero-text {
+    margin: 0 auto;
     float: none;
     margin-top: 50px;
   }
@@ -1018,10 +1041,45 @@ form .veld {
     width: 100%;
     float: none;
   }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-container .lcol {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .about-container .rcol {
+    float: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .text-dump {
+    max-width: 100%;
+    margin: 50px 20px 50px 20px;
+  }
+  .text-dump h1 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .text-dump p {
+    font-family: "Raleway", sans-serif;
+  }
+
+  .maps, .map {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 480px) {
   body {
     background-color: lightblue;
+  }
+
+  .banner-books h2 {
+    width: 30%;
   }
 
   .books-grid {
@@ -1066,6 +1124,7 @@ form .veld {
     display: inline-block;
   }
   .filter-bar .filter-box, .filter-bar .filter-recipies, .filter-recipies .filter-box, .filter-recipies .filter-recipies {
+    text-align: left;
     width: 80%;
     display: inline-block;
   }
@@ -1079,5 +1138,9 @@ form .veld {
   }
   footer .footer-menu nav li:last-child {
     padding-right: 10px;
+  }
+
+  .flex-container .flextest .flex {
+    max-width: 46%;
   }
 }

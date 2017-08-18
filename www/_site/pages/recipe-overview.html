@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"/>
 	<link rel="stylesheet" href="../css/main.css"/><!-- load jquery and plugins-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400i,700i|Raleway:400,700" rel="stylesheet">
+
+	<link href="http://vjs.zencdn.net/5.19.1/video-js.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/skippr.css">
 	<title></title>
 	<meta name="description" content="cuisine">
@@ -102,6 +104,10 @@
 	            <input type="checkbox" name="author1" value="" class="vegan" >
 	            <label for="author1" class="group-filter">vegan</label>
 	          </li>
+            <li>
+	            <input type="checkbox" name="author1" value="" class="fish" >
+	            <label for="author1" class="group-filter">fish</label>
+	          </li>
 
 
 	        </ul>
@@ -120,29 +126,29 @@
 	      <div class="filter-list">
 	        <ul>
 	          <li>
-	            <input type="checkbox" name="author1" value="" class="main-meal" >
-	            <label for="author1" class="group-filter">mail meal</label>
+	            <input type="checkbox" name="main-meal" value="" class="main-meal" >
+	            <label for="main-meal" class="group-filter">mail meal</label>
 
 	          </li>
 	          <li>
-	            <input type="checkbox" name="author1" value="lunch">
-	            <label for="author1" class="group-filter">lunch</label>
+	            <input type="checkbox" name="lunch" class="lunch">
+	            <label for="lunch" class="group-filter">lunch</label>
 	          </li>
 						<li>
-	            <input type="checkbox" name="author1" value="breakfast">
-	            <label for="author1" class="group-filter">breakfast</label>
+	            <input type="checkbox" name="breakfast" class="breakfast">
+	            <label for="breakfast" class="group-filter">breakfast</label>
 	          </li>
 						<li>
-	            <input type="checkbox" name="author1" value="starters">
+	            <input type="checkbox" name="author1" class="starters">
 	            <label for="author1" class="group-filter">starter</label>
 	          </li>
 						<li>
-	            <input type="checkbox" name="author1" value="snacks">
+	            <input type="checkbox" name="author1" class="snacks">
 	            <label for="author1" class="group-filter">snack</label>
 	          </li>
 						<li>
-	            <input type="checkbox" name="author1" value="drinks">
-	            <label for="author1" class="group-filter">drinks</label>
+	            <input type="checkbox" name="drinks" class="drinks">
+	            <label for="drinks" class="group-filter">drinks</label>
 	          </li>
 
 
@@ -217,32 +223,32 @@
         <img src="../assets/images/thumbs/recipies/banana-blossom-salad.png" alt="banana blossom salad">
         <h2><a href="../pages/recipies/vietnamese-salad.html"> Vietnamese Banana Blossom Salad</a></h2>
       </div>
-      <div class="flex asia">
+      <div class="flex asia vegan main-meal">
         <img src="../assets/images/thumbs/recipies/tom-kah.png" alt="thom kah salad">
         <h2><a href="../pages/recipies/tom-kah.html"> Tom Kha Tofu</a></h2>
       </div>
-      <div class="flex asia">
+      <div class="flex asia fish main-meal">
         <img src="../assets/images/thumbs/recipies/curry.png" alt="curry monkfish">
         <h2><a href="../pages/recipies/monk-curry.html"> Sri Lankan-style monkfish curry</a></h2>
       </div>
-      <div class="flex vegan eur">
+      <div class="flex vegan eur breakfast">
         <img src="../assets/images/thumbs/recipies/chia-berry-porridge.png" alt="chia berry porridge">
         <h2><a href="../pages/recipies/chia-raspberry-breakfast.html"> Chia &amp; Raspberry Breakfast</a></h2>
       </div>
-			<div class="flex vegan south-am">
+			<div class="flex vegan south-am fish starter">
         <img src="../assets/images/thumbs/recipies/fish1.png" alt="lemon fish">
         <h2><a href="../pages/recipies/lemon-chipotle.html"> Lemon sole with chipotle</a></h2>
       </div>
-			<div class="flex">
+			<div class="flex asia fish main-meal">
         <img src="../assets/images/thumbs/recipies/fish2.png" alt="salmon">
         <h2><a href="../pages/recipies/salmon-sweet.html"> Asian salmon &amp; sweet potato</a></h2>
       </div>
 
-			<div class="flex asia">
+			<div class="flex asia main-meal">
         <img src="../assets/images/thumbs/recipies/lemongrass-curry.png" alt="lemongrass curry">
         <h2><a href="../pages/recipies/lemongrass-aubergine-curry.html"> Aubergine &amp; Lemongrass Curry</a></h2>
       </div>
-			<div class="flex">
+			<div class="flex asia meat lunch">
         <img src="../assets/images/thumbs/recipies/pork.png" alt="pork noodles">
         <h2><a href="../pages/recipies/pork-noodle.html"> Pork tonkatsu &amp; noodles</a></h2>
       </div>
@@ -251,10 +257,10 @@
 				<div class="banner-content">
 
 					<h2>recipies</h2>
-					<p>De lekkerste bbq salades en nog meer lekkers</p>
-					<div class="cta-menu">
+					<p>the best salads for summer</p>
+					<div class="cta-menu" id="vegan">
 
-						<a href=""><h3>All bbq recipies</h3></a>
+						<a href="#"><h3>All vegan recipies</h3></a>
 					</div>
 
 				</div>
@@ -262,19 +268,19 @@
 
 			</div>
 
-			<div class="flex">
+			<div class="flex eur breakfast vegan">
         <img src="../assets/images/thumbs/recipies/protein-boosted-oatmeal.png" alt="prtein oatmeal">
         <h2><a href="../pages/recipies/oatmeal.html"> Protein Boosted Oatmeal</a></h2>
       </div>
-      <div class="flex">
+      <div class="flex main-meal am vegitarian">
         <img src="../assets/images/thumbs/recipies/smashed-tomato-pasta.png" alt="tomato pasta">
         <h2><a href="../pages/recipies/summer-tomato.html"> Summer Pasta with Smashed Tomatoes</a></h2>
       </div>
-      <div class="flex am">
+      <div class="flex am main-meal vegitarian">
         <img src="../assets/images/thumbs/recipies/spaghetti-squash.png" alt="spegetti">
         <h2><a href="../pages/recipies/spaghetti-squash.html"> Spaghetti with Beluga Lentils, Pesto </a></h2>
       </div>
-      <div class="flex">
+      <div class="flex breakfast vegan lunch">
         <img src="../assets/images/thumbs/recipies/turmeric-breakfast-muffins.png" alt="muffins">
         <h2><a href="../pages/single-recipe.html"> Turmeric Breakfast Muffins</a></h2>
       </div>
@@ -283,17 +289,17 @@
         <h2><a href="../pages/recipies/vegan-tart.html"> Vegan Apple &amp; Oat Tartlets</a></h2>
       </div>
 
-      <div class="flex">
+      <div class="flex drinks">
         <img src="../assets/images/thumbs/recipies/gingerbread-smoothie.png" alt="ginger smoothie">
         <h2><a href="../pages/single-recipe.html"> Gingerbread Shake</a></h2>
       </div>
 
-      <div class="flex">
+      <div class="flex breakfast">
         <img src="../assets/images/thumbs/recipies/buckwheatporridge.png" alt="buckwheat porridge">
         <h2><a href="../pages/single-recipe.html"> Winter Buckwheat Porridge</a></h2>
       </div>
 
-      <div class="flex">
+      <div class="flex snacks vegan eur">
         <img src="../assets/images/thumbs/recipies/raw-brownies.png" alt="brownies">
         <h2><a href="../pages/single-recipe.html"> Raw Hazelnut &amp; Chai Brownies</a></h2>
       </div>

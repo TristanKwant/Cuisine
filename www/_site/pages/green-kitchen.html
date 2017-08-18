@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"/>
 	<link rel="stylesheet" href="../css/main.css"/><!-- load jquery and plugins-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400i,700i|Raleway:400,700" rel="stylesheet">
+
+	<link href="http://vjs.zencdn.net/5.19.1/video-js.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/skippr.css">
 	<title>The green kitchen</title>
 	<meta name="description" content="cuisine">
@@ -116,6 +118,7 @@
 			<ul>
 				<li class="summary">summary</li>
 				<li class="specs">specifications</li>
+        <li class="vid">video</li>
 			</ul>
 		</div>
 		<div class="content-area summary content-area-active">
@@ -133,6 +136,37 @@
 			</ul>
 
 		</div>
+    <div class="content-area vid">
+      <nav>
+        <ul>
+          <li>small</li>
+          <li>medium</li>
+        </ul>
+      </nav>
+<!-- Begin video -->
+			<div class="video-container small">
+				<video id="my-video" class="video-js" controls preload="auto" width="400" height="255" poster="../assets/images/thumbs/recipies/curry.png" data-setup="{}">
+  					<source src="../assets/video/vid-green-small.mp4" type="video/mp4">
+            <source src="../assets/video/vid-green-small.webm" type="video/webm">
+  					<p class="vjs-no-js">
+      					To view this video please enable JavaScript, and consider upgrading to a web browser that
+      					<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+   					</p>
+				</video>
+<!-- Einde video small-->
+      </div>
+<!-- Begin video medium-->
+			<div class="video-container medium">
+				<video id="my-video" class="video-js" controls preload="auto" width="400" height="255" poster="../assets/images/thumbs/recipies/curry.png" data-setup="{}">
+  					<source src="../assets/video/vid-green-medium.mp4" type="video/mp4">
+            <source src="../assets/video/vid-green-medium.webm" type="video/webm">
+  					<p class="vjs-no-js">
+      					To view this video please enable JavaScript, and consider upgrading to a web browser that
+      					<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+   					</p>
+				</video>
+<!-- Einde video -->
+    </div>
 
 
 	</div>
@@ -192,5 +226,6 @@
 
 </footer>
 
+<script src="http://vjs.zencdn.net/5.19.1/video.js"></script>
 </body>
 </html>
